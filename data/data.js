@@ -67,7 +67,7 @@ window.WAM_DATA = {
    "name": "POTENZA SPORT",
    "box": "0.02 · Effortless Comfort",
    "color": "#FF0033",
-   "img": null,
+   "img": "assets/pack-potenza.webp",
    "tagline": "EFFORTLESS COMFORT",
    "claims": [
     "Luxury comfort experience",
