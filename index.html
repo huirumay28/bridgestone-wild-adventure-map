@@ -1,0 +1,231 @@
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#09090b">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="robots" content="noindex, nofollow">
+<title>Bridgestone × Okamoto · Taiwan-exclusive Wild Adventure Map (concept)</title>
+<meta name="description" content="Bridgestone's Taiwan-exclusive Wild Adventure Map: secret scenic spots, the right tire for every road, a pit stop on every route. Concept prototype.">
+<meta property="og:title" content="Bridgestone × Okamoto · The Ultimate Taiwan Wild Adventure Map">
+<meta property="og:description" content="Fasten your seatbelts. Things are about to get wild.">
+<link rel="icon" href="assets/icon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://unpkg.com" crossorigin>
+<link rel="preconnect" href="https://server.arcgisonline.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,500;0,700;0,800;0,900;1,800;1,900&family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@800;900&family=Great+Vibes&family=Noto+Sans+TC:wght@500;700&display=swap" rel="stylesheet">
+<!--LEAFLET_CSS--><link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="">
+<!--SITE_CSS--><link rel="stylesheet" href="css/site.css">
+<!--APP_CSS--><link rel="stylesheet" href="css/app.css">
+</head>
+<body class="bg-zinc-950 text-zinc-100 font-sans antialiased">
+
+<!-- ============ NAV ============ -->
+<header id="topnav" class="fixed inset-x-0 top-0 z-50 transition-colors duration-300">
+  <div class="mx-auto flex max-w-6xl items-center gap-3 px-4 sm:px-6" style="padding-top:env(safe-area-inset-top)">
+    <a href="#hero" class="flex h-14 min-w-0 items-center gap-1.5 text-white sm:gap-2" aria-label="Bridgestone × Okamoto, back to top">
+      <span class="bs-word text-[13.5px] sm:text-[17px]">BRIDGESTONE</span>
+      <span class="text-brand text-sm font-bold">×</span>
+      <span class="oka-word text-[13.5px] sm:text-[17px]">okamoto</span>
+    </a>
+    <nav class="ml-auto hidden items-center gap-6 text-[15px] text-zinc-300 md:flex" aria-label="Sections">
+      <a class="hover:text-white" href="#features">The tech</a>
+      <a class="hover:text-white" href="#map-section">The map</a>
+      <a class="hover:text-white" href="#credits">Credits</a>
+    </nav>
+    <button type="button" data-open-app class="ml-auto md:ml-2 inline-flex h-11 shrink-0 items-center gap-1.5 whitespace-nowrap rounded-full bg-brand px-4 text-[15px] sm:px-5 font-bold text-white shadow-neon transition hover:brightness-110 active:scale-95">Open map <span aria-hidden="true">→</span></button>
+  </div>
+</header>
+
+<main>
+<!-- ============ HERO ============ -->
+<section id="hero" class="hero relative isolate overflow-hidden">
+  <div class="hero__glow" aria-hidden="true"></div>
+  <svg class="hero-tire" viewBox="0 0 600 600" aria-hidden="true"></svg>
+  <div class="relative mx-auto grid max-w-6xl items-center gap-2 px-5 pb-14 pt-20 sm:px-6 lg:grid-cols-[1.05fr_1fr] lg:gap-x-6 lg:gap-y-0 lg:pb-24 lg:pt-32">
+    <div class="reveal text-center lg:col-start-1 lg:row-start-1 lg:self-end lg:text-left">
+      <p class="font-display text-[13px] font-bold uppercase tracking-[.28em] text-zinc-400">Bridgestone <span class="text-brand">×</span> Okamoto</p>
+      <h1 class="mt-4">
+        <span class="inline-block rounded-full bg-brand-deep px-4 py-1.5 font-display text-[15px] font-extrabold uppercase tracking-[.14em] text-white shadow-neon sm:text-base">Taiwan-exclusive</span>
+        <span class="lockup mt-3 block"><span class="lockup__serif">Wild Adventure</span><span class="lockup__script">Map</span></span>
+      </h1>
+    </div>
+
+    <div class="packstage reveal lg:col-start-2 lg:row-span-2 lg:row-start-1" aria-label="Bridgestone × Okamoto packaging">
+      <div class="packstage__ring" aria-hidden="true"></div>
+      <div class="packstage__ring packstage__ring--2" aria-hidden="true"></div>
+      <img class="pack pack--l" src="assets/pack-turanza.webp" width="460" height="558" alt="okamoto × Bridgestone TURANZA box: Superior Extended Range, 12 condoms" fetchpriority="high">
+      <img class="pack pack--r" src="assets/pack-dueler.webp" width="466" height="562" alt="okamoto × Bridgestone DUELER box: Premier Wet-Handling, ribbed, 12 condoms" fetchpriority="high">
+      <img class="pack pack--c" src="assets/pack-potenza.svg" width="460" height="560" alt="Concept render of the red-and-black POTENZA SPORT 0.02 box: Effortless Comfort">
+      <span class="packstage__chip"><b>0.02</b> mm of pure grip</span>
+      <span class="packstage__floor" aria-hidden="true"></span>
+    </div>
+
+    <div class="reveal text-center lg:col-start-1 lg:row-start-2 lg:self-start lg:text-left">
+      <p class="mx-auto mt-5 max-w-md text-lg leading-relaxed text-zinc-300 lg:mx-0">Fasten your seatbelts. <strong class="text-white">Things are about to get wild.</strong> Secret spots around Taipei, the right Bridgestone tire for every road, and a pit stop on every route.</p>
+      <div class="mt-7 flex flex-col items-center gap-3 sm:flex-row sm:justify-center lg:justify-start">
+        <button type="button" data-open-app class="cta-xl group inline-flex h-14 w-full max-w-xs items-center justify-center gap-3 rounded-full bg-brand px-7 font-display text-lg font-extrabold text-white shadow-neon-lg transition hover:brightness-110 active:scale-[.97] sm:w-auto">Are you two ready? <span aria-hidden="true" class="transition group-hover:translate-x-1">→</span></button>
+        <a href="#features" class="inline-flex h-12 items-center rounded-full border border-white/15 px-6 text-[16px] font-semibold text-zinc-200 transition hover:border-brand hover:text-white">See the tech</a>
+      </div>
+      <dl class="mx-auto mt-9 grid max-w-md grid-cols-3 gap-2 text-center lg:mx-0 lg:text-left">
+        <div><dt class="sr-only">Secret spots</dt><dd class="font-display text-3xl font-black text-white">25</dd><p class="text-[13px] leading-tight text-zinc-400">secret spots</p></div>
+        <div><dt class="sr-only">Pit stops</dt><dd class="font-display text-3xl font-black text-white">12</dd><p class="text-[13px] leading-tight text-zinc-400">Bridgestone pit stops</p></div>
+        <div><dt class="sr-only">Awkward encounters</dt><dd class="font-display text-3xl font-black text-brand">0</dd><p class="text-[13px] leading-tight text-zinc-400">awkward encounters</p></div>
+      </dl>
+    </div>
+  </div>
+  <a href="#features" class="scrollcue" aria-label="Scroll to features"><span></span></a>
+</section>
+
+<!-- ============ FEATURES ============ -->
+<section id="features" class="relative scroll-mt-14 border-t border-white/5 bg-zinc-950 py-16 sm:py-24">
+  <div class="mx-auto max-w-6xl px-5 sm:px-6">
+    <div class="reveal mx-auto max-w-2xl text-center">
+      <span class="inline-block rounded-full bg-brand-deep px-3.5 py-1 font-display text-[13px] font-extrabold uppercase tracking-[.16em] text-white">Designs</span>
+      <h2 class="lockup lockup--md mt-4"><span class="lockup__serif">Bridge Stone-Hard</span><span class="lockup__script">Experience</span></h2>
+      <p class="mt-4 text-lg text-zinc-400">We took our tire tech off the road. Same engineering obsession, very different kind of ride.</p>
+    </div>
+    <div class="mt-12 grid gap-5 md:grid-cols-3">
+      <article class="feat reveal" style="--c:#17C2B3">
+        <div class="feat__tread" data-kind="DUELER" aria-hidden="true"></div>
+        <div class="feat__in">
+          <div class="flex flex-wrap items-center gap-3"><span class="feat__num">01</span><span class="feat__tag">DUELER · Premier Wet-Handling</span></div>
+          <h3 class="feat__title">Class-leading wet handling &amp; braking performance</h3>
+          <p class="feat__road"><b>On the road:</b> Superior wet grip, with tread channels that clear water fast so you stay planted and stop exactly where you mean to.</p>
+          <p class="feat__box"><b>Off the road:</b> Same philosophy. Excellent grip when things get wet, and total control all the way to the finish line.</p>
+        </div>
+      </article>
+      <article class="feat reveal" style="--c:#2F6BFF">
+        <div class="feat__tread" data-kind="TURANZA" aria-hidden="true"></div>
+        <div class="feat__in">
+          <div class="flex flex-wrap items-center gap-3"><span class="feat__num">02</span><span class="feat__tag">TURANZA · Superior Extended Range</span></div>
+          <h3 class="feat__title">High comfort, low rolling resistance &amp; exclusive ENLARGE™ technology</h3>
+          <p class="feat__road"><b>On the road:</b> Less resistance means more range, and every stretch feels smoother than the last.</p>
+          <p class="feat__box"><b>Off the road:</b> Built to go the extra distance. We'll let you work out what the exclusive ENLARGE™ technology enlarges.</p>
+        </div>
+      </article>
+      <article class="feat reveal" style="--c:#FF0033">
+        <div class="feat__tread" data-kind="POTENZA" aria-hidden="true"></div>
+        <div class="feat__in">
+          <div class="flex flex-wrap items-center gap-3"><span class="feat__num">03</span><span class="feat__tag">POTENZA SPORT · 0.02</span></div>
+          <h3 class="feat__title">Comfortable, but not very noise-canceling</h3>
+          <p class="feat__road"><b>On the road:</b> Our tires are engineered to be quiet, so you can fully enjoy what you're meant to hear.</p>
+          <p class="feat__box"><b>Off the road:</b> This one is the complete opposite of our tires. You might want to warn the neighbors.</p>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ MAP SECTION ============ -->
+<section id="map-section" class="relative scroll-mt-14 overflow-hidden border-t border-white/5 py-16 sm:py-24">
+  <div class="mapsec__glow" aria-hidden="true"></div>
+  <div class="relative mx-auto grid max-w-6xl gap-10 px-5 sm:px-6 lg:grid-cols-[1fr_auto] lg:items-center lg:gap-16">
+    <div>
+      <div class="reveal">
+        <span class="inline-block rounded-full border border-brand/60 px-3.5 py-1 font-display text-[13px] font-extrabold uppercase tracking-[.16em] text-brand">The main attraction</span>
+        <h2 class="mt-4 font-display text-[34px] font-black leading-[1.05] tracking-tight text-white sm:text-5xl">The Ultimate Taiwan<br><span class="text-brand">Wild Adventure</span> Map</h2>
+        <p class="mt-4 max-w-xl text-lg text-zinc-400">Thirteen secret spots around Taipei, plus twelve bonus hideaways across the island. Each one comes with the right tire for the road, and a Bridgestone pit stop on the way. It's basically a guide to the best spots for some public seggs. Scenic ones, obviously.</p>
+      </div>
+      <ol class="mt-8 grid gap-4">
+        <li class="smart reveal"><span class="smart__n">1</span><div><h3>The right tire for every route</h3><p>Tap a spot and we match the road. POTENZA RE-71RS for Yangmingshan hairpins, TURANZA 6 for the Tamsui sunset cruise, DUELER A/T002 for when the tarmac gives up.</p></div></li>
+        <li class="smart reveal"><span class="smart__n">2</span><div><h3>A pit stop on every route</h3><p>Every route passes an official Bridgestone tire center. Check the pressure, hydrate, compose yourselves.</p></div></li>
+        <li class="smart reveal"><span class="smart__n">3</span><div class="flex-1"><h3>Stealth Mode</h3><p>If the system detects you're already en route, the spot will be temporarily hidden from others to avoid awkward encounters.</p>
+          <label class="toggle mt-3"><input type="checkbox" id="landingStealth" checked><span class="toggle__ui" aria-hidden="true"></span><span class="toggle__txt">Stealth Mode <b data-stealth-label>ON</b></span></label></div></li>
+      </ol>
+      <div class="mt-8 lg:hidden">
+        <button type="button" data-open-app class="preview reveal" aria-label="Open the Wild Adventure Map">
+          <img src="assets/app-preview.webp" width="780" height="900" alt="" loading="lazy">
+          <span class="preview__cta">Open the map <span aria-hidden="true">→</span></span>
+        </button>
+      </div>
+    </div>
+
+    <!-- The app: fullscreen overlay on phones, phone-frame embed on desktop -->
+    <div id="appSlot" class="appslot">
+      <div id="app" class="app" data-view="map" role="application" aria-label="Wild Adventure Map">
+        <div id="map" class="map" aria-label="Map of secret spots"></div>
+
+        <header class="topbar" id="exploreTop">
+          <div class="topbar__row">
+            <button class="iconbtn app-close" id="appClose" type="button" aria-label="Close map"></button>
+            <h2 class="topbar__title">WILD ADVENTURE</h2>
+            <button class="iconbtn" id="regionBtn" type="button" aria-label="Show all of Taiwan"></button>
+            <button class="iconbtn" id="myJourneyBtn" type="button" aria-label="My journey"><i class="dotbadge" id="topBadge" hidden></i></button>
+          </div>
+          <label class="search">
+            <span class="search__icon" aria-hidden="true"></span>
+            <input id="searchInput" type="search" inputmode="search" enterkeyhint="search" autocomplete="off" placeholder="Search destinations" aria-label="Search destinations">
+          </label>
+          <div id="searchResults" class="search__results" hidden></div>
+          <div class="chips" id="chips" role="tablist" aria-label="Filter spots">
+            <button class="chip is-active" data-filter="all" role="tab" aria-selected="true" type="button">All</button>
+            <button class="chip" data-filter="mountain" role="tab" aria-selected="false" type="button">Mountain</button>
+            <button class="chip" data-filter="seaside" role="tab" aria-selected="false" type="button">Seaside</button>
+            <button class="chip" data-filter="forest" role="tab" aria-selected="false" type="button">Forest</button>
+            <button class="chip" data-filter="stars" role="tab" aria-selected="false" type="button">Stargazing</button>
+          </div>
+        </header>
+
+        <header class="routetop" id="routeTop" hidden>
+          <button class="iconbtn iconbtn--solid" id="routeBack" type="button" aria-label="Back"></button>
+          <div class="routetop__txt"><strong id="routeTitle">Route</strong><small id="routeSub">via Bridgestone pit stop</small></div>
+          <span class="routetop__sp"></span>
+        </header>
+
+        <article id="peek" class="card peek" hidden></article>
+        <article id="routeCard" class="card routecard" hidden></article>
+
+        <section id="detail" class="detail" aria-label="Spot details" hidden>
+          <div class="detail__scroll" id="detailBody"></div>
+          <div class="detail__cta" id="detailCta"></div>
+        </section>
+
+        <section class="pageview" id="tiresView" aria-label="Tires"><div class="page" id="tiresPage"></div></section>
+        <section class="pageview" id="journeyView" aria-label="My journey"><div class="page" id="journeyPage"></div></section>
+        <section class="pageview" id="stealthView" aria-label="Stealth mode"><div class="page" id="stealthPage"></div></section>
+
+        <nav class="tabbar" id="tabbar" aria-label="App">
+          <button class="tab is-active" data-tab="map" type="button"><span class="tab__ic" data-ic="home"></span><span class="tab__lb">Explore</span></button>
+          <button class="tab" data-tab="tires" type="button"><span class="tab__ic" data-ic="tire"></span><span class="tab__lb">Tires</span></button>
+          <button class="tab" data-tab="journey" type="button"><span class="tab__ic" data-ic="route"></span><span class="tab__lb">Journey</span><i class="dotbadge" id="tabBadge" hidden></i></button>
+          <button class="tab" data-tab="stealth" type="button"><span class="tab__ic" data-ic="eyeoff"></span><span class="tab__lb">Stealth</span></button>
+        </nav>
+
+        <div id="stealth" class="stealthfx" hidden aria-live="assertive"></div>
+        <div id="lightbox" class="lightbox" hidden role="dialog" aria-label="Photos"></div>
+        <div id="toast" class="toast" role="status" aria-live="polite" hidden></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CREDITS ============ -->
+<section id="credits" class="scroll-mt-14 border-t border-white/5 bg-black/40 py-14">
+  <div class="mx-auto max-w-6xl px-5 text-[15px] leading-relaxed text-zinc-400 sm:px-6">
+    <h2 class="font-display text-2xl font-extrabold text-white">Credits &amp; sources</h2>
+    <p class="mt-3 max-w-3xl">This is a <b class="text-zinc-200">concept prototype</b> made for a creative pitch. It is not an official Bridgestone or Okamoto website or product. Spots, tire models and tire centers are real. Privacy scores, "occupied" spots and Stealth Mode are simulated for the demo.</p>
+    <div class="mt-6 grid gap-4 md:grid-cols-3">
+      <details class="credit-box" open><summary>Map, routes &amp; data</summary><ul id="creditsData" class="mt-2 space-y-1.5"></ul></details>
+      <details class="credit-box"><summary>Bridgestone tire centers &amp; tires</summary><ul id="creditsCenters" class="mt-2 space-y-1.5"></ul></details>
+      <details class="credit-box"><summary>Photos (<span id="photoCount">0</span>, Wikimedia Commons)</summary><ul id="creditsPhotos" class="mt-2 space-y-1.5"></ul></details>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="border-t border-white/5 bg-black py-10 text-center" style="padding-bottom:calc(2.5rem + env(safe-area-inset-bottom))">
+  <p class="mx-auto max-w-xl px-6 font-serif text-2xl font-black italic leading-snug text-white">“To experience the ultimate passion, you must first arrive safely.”</p>
+  <p class="mt-4 px-6 text-[14px] text-zinc-500">18+ · Obey traffic laws, park rules and common decency · Concept prototype, not affiliated with or endorsed by Bridgestone or Okamoto.</p>
+</footer>
+
+<!--DATA--><script src="data/data.js"></script>
+<!--ROUTES--><script src="data/routes.js"></script>
+<!--PHOTOS--><script src="data/photos.js"></script>
+<!--LEAFLET_JS--><script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin="" defer></script>
+<!--APP_JS--><script src="js/app.js" defer></script>
+</body>
+</html>
