@@ -12,7 +12,7 @@ Deep links: `#app`, `#peek=<id>`, `#spot=<id>`, `#route=<id>`, `#tires`, `#journ
 
 - Base map: Esri World Dark Gray Canvas + World Hillshade (© Esri, HERE, Garmin, © OpenStreetMap contributors).
 - Geodata: © OpenStreetMap contributors (ODbL). Routing: Project OSRM. Map library: Leaflet (BSD-2).
-- Packaging images: supplied by the client (the red POTENZA 0.02 box is cut out of the client's LINE screenshot, feedback round 2).
+- Packaging images: supplied by the client (the red POTENZA 0.02 box: client's original 203×347 JPG, background removed and upscaled 4× with Real-ESRGAN, pill text kept from a faithful Lanczos upscale).
 - Bridgestone logo: [Wikimedia Commons, File:Bridgestone logo full color.svg](https://commons.wikimedia.org/wiki/File:Bridgestone_logo_full_color.svg) (public-domain text logo; recoloured white for dark backgrounds). Trademark of Bridgestone Corporation.
 - okamoto logo: vector redrawn from the client's pack photography (no official vector was available). Trademark of Okamoto Industries.
 - Campaign wordmark "Bridge Stone-Hard Experience": SVG text recreation of the idea wordmark using Roboto Serif (condensed) and Great Vibes (Google Fonts, OFL).

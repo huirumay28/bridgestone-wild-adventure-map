@@ -36,7 +36,7 @@
     check: sv('<path d="M4 12l5 5L20 6"/>', { w: 2.6 })
   };
   var TIRE_PACK = { RE71RS: 'POTENZA', PSPORT: 'POTENZA', TURANZA6: 'TURANZA', DUELERAT: 'DUELER' };
-  var PACK_IMG = { POTENZA: 'assets/pack-potenza.webp', DUELER: 'assets/pack-dueler.webp', TURANZA: 'assets/pack-turanza.webp' };
+  var PACK_IMG = { POTENZA: 'assets/pack-potenza-002.webp', DUELER: 'assets/pack-dueler.webp', TURANZA: 'assets/pack-turanza.webp' };
   Object.keys(PACK_IMG).forEach(function (k) { PACK_IMG[k] = (window.WAM_ASSETS && window.WAM_ASSETS[PACK_IMG[k]]) || PACK_IMG[k]; });
   // Deliberately unscientific "privacy score" (demo copy, not real reviews)
   var PRIV = { tamsui: 5.0, yangming: 4.9, datun: 4.8, qixing: 4.6, zhuzihu: 4.7, qingtiangang: 4.9, guandu: 4.5, neihu: 4.9, nangang: 5.0, dajia: 4.2, xianjiyan: 4.4, maokong: 4.6, fuzhou: 4.8,
